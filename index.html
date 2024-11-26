@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            cursor: pointer;
+        }
+
+        th.active.asc::after {
+            content: " ↑";
+        }
+
+        th.active.desc::after {
+            content: " ↓";
+        }
+    </style>
+</head>
+<body>
+    <h1>Sortable Table</h1>
+    <table id="peopleTable">
+        <thead>
+            <tr>
+                <th data-column="firstName">First Name</th>
+                <th data-column="lastName">Last Name</th>
+                <th data-column="age">Age</th>
+                <th data-column="city">City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically populated here -->
+        </tbody>
+    </table>
+
+    <script src="sortedTable.js"></script>
+</body>
+</html>
